@@ -6,10 +6,8 @@
 @import "styles/fonts.scss";
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   color: var(--color-primary);
+  background: #000000;
 }
 
-p {
-  color: var(--color-on-surface);
-}
