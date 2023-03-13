@@ -1,28 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import "./HomePage.scss";
+import HeadingMovie from "@/modules/HomeModule/components/HeadingMovie/HeadingMovie";
+import HeadingMovieData from "../../../../assets/files/HeadingMovie.json"
 
-interface IProps {
-  msg: string;
-}
 
-export const HomePage: React.FC<IProps> = ({ msg }) => {
-  const [count, setCount] = useState(0);
+export const HomePage: React.FC = () => {
 
   return (
     <>
-      <h1>{msg}</h1>
-      <div className="card">
-        <p>
-          See the README.md for more information on how to start your challenge.
-        </p>
-        <button
-          onClick={() => {
-            setCount((count) => count + 1);
-          }}
-        >
-          count is {count}
-        </button>
-      </div>
+        <HeadingMovie
+            id={HeadingMovieData.id}
+            top={HeadingMovieData.top}
+            description={HeadingMovieData.description}
+        />
     </>
   );
 };
